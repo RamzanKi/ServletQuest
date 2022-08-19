@@ -26,13 +26,6 @@ public class Login extends HttpServlet {
         String param1 = req.getParameter("username");
         PrintWriter out = resp.getWriter();
 
-        if(param1 == null) {
-            out.write("name field can`t be empty");
-            req.getRequestDispatcher("/index.jsp").forward(req,resp);
-        } else if ("".equals(param1)) {
-            out.write("name field can`t be empty");
-            req.getRequestDispatcher("/index.jsp").forward(req,resp);
-        } else {
             User user = new User(param1);
             String username = user.getName();
 
@@ -41,17 +34,13 @@ public class Login extends HttpServlet {
             System.out.println("Username?= " + param1);
             // Print The Response
 
-//            out.write("<html><body><div id='serlvetResponse' style='text-align: center;'>");
-//            out.write("</div></body></html>");
             out.close();
-
 //            RequestDispatcher requestDispatcher = req.getRequestDispatcher("game.jsp");
 //            requestDispatcher.forward(req, resp);
 
 //            req.getRequestDispatcher("/game.jsp").forward(req,resp);
 
             req.getServletContext().getRequestDispatcher("/game.jsp").forward(req, resp);
-        }
     }
 
 //    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

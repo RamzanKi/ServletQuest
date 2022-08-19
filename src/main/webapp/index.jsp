@@ -18,7 +18,7 @@
     <h2>Enter your name</h2>
     <form id="loginFormId" name="loginForm" method="post" action="loginServlet">
         <div id="usernameDiv" class="paddingBtm">
-            <span id="user">Username: </span><input type="text" name="username" />
+            <span id="user">Username: </span><input type="text" name="username" required/>
         </div>
         <div id="loginBtn">
             <input id="btn" type="submit" value="Login" />
