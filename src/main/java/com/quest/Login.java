@@ -24,7 +24,6 @@ public class Login extends HttpServlet {
 
         // Post Parameters From The Request
         String param1 = req.getParameter("username");
-        PrintWriter out = resp.getWriter();
 
             User user = new User(param1);
             String username = user.getName();
@@ -33,13 +32,6 @@ public class Login extends HttpServlet {
 
             System.out.println("Username?= " + param1);
             // Print The Response
-
-            out.close();
-//            RequestDispatcher requestDispatcher = req.getRequestDispatcher("game.jsp");
-//            requestDispatcher.forward(req, resp);
-
-//            req.getRequestDispatcher("/game.jsp").forward(req,resp);
-
             req.getServletContext().getRequestDispatcher("/game.jsp").forward(req, resp);
     }
 
