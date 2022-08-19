@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/loginServlet")
 public class Login extends HttpServlet {
 
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         handleRequest(req, resp);
     }
     public void handleRequest(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -49,6 +49,11 @@ public class Login extends HttpServlet {
 //            requestDispatcher.forward(req, resp);
 
             req.getRequestDispatcher("/game.jsp").forward(req,resp);
+            doPost(req, resp);
         }
+    }
+
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/game.jsp").forward(req,resp);
     }
 }

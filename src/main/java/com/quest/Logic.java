@@ -15,6 +15,7 @@ public class Logic extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         HttpSession currentSession = req.getSession();
 
+        currentSession.getAttribute("username");
         PrintWriter writer = resp.getWriter();
         writer.print("Second");
 
