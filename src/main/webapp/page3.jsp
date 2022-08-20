@@ -14,6 +14,7 @@
     <br><br><br><br><br><br><br><br><br><br><br>
     <td>Username: "<%= session.getAttribute("username") %>"</td><br><br>
     <td>Количество игр: "<%= session.getAttribute("userCount") %>"</td><br><br>
+    <td>ip address: "<%= session.getAttribute("ip") %>"</td><br><br>
     <form id="loginFormId" name="loginForm" method="get" action="logicServlet">
         <div id="usernameDiv" class="paddingBtm">
             <span id="question1">question7: </span><input type="radio" name="question" value="7" required/>

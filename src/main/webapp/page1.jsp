@@ -14,6 +14,7 @@
     <br><br><br><br><br><br><br><br><br><br><br>
     <td>Username: "<%= session.getAttribute("username") %>"</td><br><br>
     <td>Количество игр: "<%= session.getAttribute("userCount") %>"</td><br><br>
+    <td>ip address: "<%= session.getAttribute("ip") %>"</td><br><br>
     <h1>Ты принял вызов<p>Choose your destiny</p></h1>
     <form id="loginFormId" name="loginForm" method="get" action="logicServlet">
         <div id="usernameDiv" class="paddingBtm">
