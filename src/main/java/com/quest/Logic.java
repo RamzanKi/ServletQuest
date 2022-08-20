@@ -22,12 +22,17 @@ public class Logic extends HttpServlet {
 
         String username = (String) currentSession.getAttribute("username");
 //        out.println("Name: " + username);
-
         if (req.getParameter("question").equals("1")) {
            req.getServletContext().getRequestDispatcher("/page1.jsp").forward(req, resp);
         }
         if (req.getParameter("question").equals("2")) {
             req.getServletContext().getRequestDispatcher("/page2.jsp").forward(req, resp);
+        }
+        if (req.getParameter("question").equals("3")) {
+            req.getServletContext().getRequestDispatcher("/page3.jsp").forward(req, resp);
+        }
+        if (req.getParameter("question").equals("4")) {
+            req.getServletContext().getRequestDispatcher("/page3.jsp").forward(req, resp);
         }
 //        out.close();
     }

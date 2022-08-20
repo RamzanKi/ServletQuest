@@ -14,6 +14,7 @@
 </head>
 <body>
 <center>
+    <br><br><br><br><br><br><br><br><br><br><br>
     <h1>Prologue:<p>you are on Spaceship</p></h1>
     <h2>Enter your name</h2>
     <form id="loginFormId" name="loginForm" method="get" action="loginServlet">

@@ -11,6 +11,10 @@
 <body>
 
 <center>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <td>Username: "<%= session.getAttribute("username") %>"</td><br><br>
+    <td>Количество игр: "<%= session.getAttribute("userCount") %>"</td><br><br>
+    <h1>Ты принял вызов<p>Choose your destiny</p></h1>
     <form id="loginFormId" name="loginForm" method="get" action="logicServlet">
         <div id="usernameDiv" class="paddingBtm">
             <span id="question1">question3: </span><input type="radio" name="question" value="3" required/>

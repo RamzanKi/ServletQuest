@@ -24,6 +24,9 @@ public class Login extends HttpServlet {
         String param1 = req.getParameter("username");
 
         User user = new User(param1);
+        user.addUser();
+        req.setAttribute("userCount", user.getUsersCount());
+        currentSession.setAttribute("userCount", user.getUsersCount());
         String username = user.getName();
 
 //        ServletContext context = getServletContext();
