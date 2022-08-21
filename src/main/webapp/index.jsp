@@ -23,7 +23,6 @@
         </div>
         <div id="loginBtn">
             <input id="btn" type="submit" value="Login" />
-<%--            <c:redirect url="/game.jsp"/>--%>
         </div>
     </form>
 </center>

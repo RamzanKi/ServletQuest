@@ -21,8 +21,6 @@
         </div>
         <div id="loginBtn">
             <input id="btn" type="submit" value="start again" />
-            <%--            <p>Name: <c:out value="${sessionScope.username}"/></p>--%>
-            <%--            <c:redirect url="/game.jsp"/>--%>
         </div>
     </form>
 </center>
