@@ -15,10 +15,11 @@
     <td>Username: "<%= session.getAttribute("username") %>"</td><br><br>
     <td>Количество игр: "<%= session.getAttribute("userCount") %>"</td><br><br>
     <td>ip address: "<%= session.getAttribute("ip") %>"</td><br><br>
+    <h1>Ты поднялся на мостик<p>Представься</p></h1>
     <form id="loginFormId" name="loginForm" method="get" action="logicServlet">
         <div id="usernameDiv" class="paddingBtm">
-            <span id="question1">question7: </span><input type="radio" name="question" value="7" required/>
-            <span id="question2">question8: </span><input type="radio" name="question" value="8" />
+            <span id="question1">Рассказать правду: </span><input type="radio" name="question" value="5" required/>
+            <span id="question2">Солгать: </span><input type="radio" name="question" value="6" />
         </div>
         <div id="loginBtn">
             <input id="btn" type="submit" value="submit" />

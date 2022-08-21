@@ -14,26 +14,30 @@ import java.io.PrintWriter;
 public class Logic extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-//        req.getServletContext().getRequestDispatcher("/game.jsp").forward(req, resp);
 
         HttpSession currentSession = req.getSession();
         resp.setContentType("text/html");
-//        PrintWriter out = resp.getWriter();
 
-        String username = (String) currentSession.getAttribute("username");
-//        out.println("Name: " + username);
         if (req.getParameter("question").equals("1")) {
            req.getServletContext().getRequestDispatcher("/page1.jsp").forward(req, resp);
         }
         if (req.getParameter("question").equals("2")) {
-            req.getServletContext().getRequestDispatcher("/page2.jsp").forward(req, resp);
+            currentSession.setAttribute("answer", GameOver.answer1);
+            req.getServletContext().getRequestDispatcher("/gameOver.jsp").forward(req, resp);
         }
         if (req.getParameter("question").equals("3")) {
             req.getServletContext().getRequestDispatcher("/page3.jsp").forward(req, resp);
         }
         if (req.getParameter("question").equals("4")) {
-            req.getServletContext().getRequestDispatcher("/page3.jsp").forward(req, resp);
+            currentSession.setAttribute("answer", GameOver.answer2);
+            req.getServletContext().getRequestDispatcher("/gameOver.jsp").forward(req, resp);
         }
-//        out.close();
+        if (req.getParameter("question").equals("5")) {
+            req.getServletContext().getRequestDispatcher("/youWin.jsp").forward(req, resp);
+        }
+        if (req.getParameter("question").equals("6")) {
+            currentSession.setAttribute("answer", GameOver.answer3);
+            req.getServletContext().getRequestDispatcher("/gameOver.jsp").forward(req, resp);
+        }
     }
 }

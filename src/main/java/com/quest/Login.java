@@ -25,27 +25,21 @@ public class Login extends HttpServlet {
 
         User user = new User(param1);
         user.addUser();
-//        req.setAttribute("userCount", user.getUsersCount());
+
         currentSession.setAttribute("userCount", user.getUsersCount());
         String username = user.getName();
 
-//        ServletContext context = getServletContext();
-//        context.setAttribute("username", username);
         String ip = req.getRemoteAddr();
+
         currentSession.setAttribute("ip", ip);
-//        req.setAttribute("username", username);
 
         currentSession.setAttribute("username", username);
 
         System.out.println("Username?= " + param1);
 
         req.getServletContext().getRequestDispatcher("/game.jsp").forward(req, resp);
-//        req.getServletContext().getRequestDispatcher("/logicServlet").forward(req, resp);
     }
 
-//    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        req.getRequestDispatcher("/game.jsp").forward(req,resp);
-//    }
 
 
 }

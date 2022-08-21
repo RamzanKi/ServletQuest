@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Ramzan
   Date: 20.08.2022
-  Time: 15:32
+  Time: 15:33
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -15,14 +15,12 @@
     <td>Username: "<%= session.getAttribute("username") %>"</td><br><br>
     <td>Количество игр: "<%= session.getAttribute("userCount") %>"</td><br><br>
     <td>ip address: "<%= session.getAttribute("ip") %>"</td><br><br>
-    <h1>Ты принял вызов<p>Поднимаешься на мостик к капитану?</p></h1>
-    <form id="loginFormId" name="loginForm" method="get" action="logicServlet">
+    <h1><%= session.getAttribute("answer") %><p>ПОРАЖЕНИЕ</p></h1>
+    <form id="loginFormId" name="loginForm" method="get" action="index.jsp">
         <div id="usernameDiv" class="paddingBtm">
-            <span id="question1">Подняться: </span><input type="radio" name="question" value="3" required/>
-            <span id="question2">Отказаться: </span><input type="radio" name="question" value="4"/>
         </div>
         <div id="loginBtn">
-            <input id="btn" type="submit" value="submit" />
+            <input id="btn" type="submit" value="start again" />
             <%--            <p>Name: <c:out value="${sessionScope.username}"/></p>--%>
             <%--            <c:redirect url="/game.jsp"/>--%>
         </div>
