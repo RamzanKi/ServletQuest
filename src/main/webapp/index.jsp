@@ -20,8 +20,8 @@
 <body>
 <center>
     <br><br><br><br><br><br><br><br><br><br><br>
-    <h1>Prologue:<p>you are on Spaceship</p></h1>
-    <h2>Enter your name</h2>
+    <h1>Пролог:<p>ты на космическом корабле...</p></h1>
+    <h2>Введи своё имя:</h2>
     <form id="loginFormId" name="loginForm" method="get" action="loginServlet">
         <div id="usernameDiv" class="paddingBtm">
             <span id="user"><label style="font-size: 28px;">Username: </label></span><input type="text" name="username" required/>
