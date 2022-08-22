@@ -1,9 +1,12 @@
+import com.quest.Logic;
 import org.junit.jupiter.api.Test;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
@@ -13,16 +16,41 @@ public class LogicTest {
 
     @Test
     public void logicTest() throws ServletException, IOException {
+        Logic logic = new Logic();
+
         HttpServletRequest request = mock(HttpServletRequest.class);
         HttpServletResponse response = mock(HttpServletResponse.class);
-
-        when(request.getParameter("question")).thenReturn("1");
-
         ServletContext servletContext = mock(ServletContext.class);
         RequestDispatcher dispatcher = mock(RequestDispatcher.class);
+
+        HttpSession session = mock(HttpSession.class);
+
+//        ServletConfig servletConfig = mock(ServletConfig.class);
+
+        servletContext.setAttribute("question", "2");
+
+        when(request.getServletContext()).thenReturn(servletContext);
+
+
+        when(request.getParameter("question")).thenReturn("2");
+
+        when(request.getSession()).thenReturn(session);
+
         when(servletContext.getRequestDispatcher("/gameOver.jsp")).thenReturn(dispatcher);
 
-        assertEquals("1", request.getParameter("question"));
+        when(request.getRequestDispatcher("/gameOver.jsp")).thenReturn(dispatcher);
+
+
+
+
+//        request.setAttribute("question", "2");
+
+
+        logic.doGet(request, response);
+
+        verify(servletContext, times(1)).getRequestDispatcher("/gameOver.jsp");
+
+        assertEquals("2", request.getParameter("question"));
 
         verify(request, atLeast(1)).getParameter("question");
     }
