@@ -18,8 +18,8 @@
     <h1><%= session.getAttribute("answer") %><p>ПОРАЖЕНИЕ</p></h1>
     <form id="loginFormId" name="loginForm" method="get" action="index.jsp">
         <div id="usernameDiv" class="paddingBtm">
-        </div>
-        <div id="loginBtn">
+        </div><br>
+        <div id="restartBtn">
             <input id="btn" type="submit" value="start again" />
         </div>
     </form>

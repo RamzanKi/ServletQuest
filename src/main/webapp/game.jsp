@@ -20,8 +20,8 @@
         <div id="usernameDiv" class="paddingBtm">
             <span id="question1">принять вызов: </span><input type="radio" name="question" value="1" required/>
             <span id="question2">отклонить: </span><input type="radio" name="question" value="2"/>
-        </div>
-        <div id="loginBtn">
+        </div><br>
+        <div id="submitBtn">
             <input id="btn" type="submit" value="submit" />
         </div>
     </form>

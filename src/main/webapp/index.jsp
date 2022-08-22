@@ -20,7 +20,7 @@
     <form id="loginFormId" name="loginForm" method="get" action="loginServlet">
         <div id="usernameDiv" class="paddingBtm">
             <span id="user">Username: </span><input type="text" name="username" required/>
-        </div>
+        </div><br>
         <div id="loginBtn">
             <input id="btn" type="submit" value="Login" />
         </div>

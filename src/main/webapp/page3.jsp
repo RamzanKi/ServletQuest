@@ -20,8 +20,8 @@
         <div id="usernameDiv" class="paddingBtm">
             <span id="question1">Рассказать правду: </span><input type="radio" name="question" value="5" required/>
             <span id="question2">Солгать: </span><input type="radio" name="question" value="6" />
-        </div>
-        <div id="loginBtn">
+        </div><br>
+        <div id="submitBtn">
             <input id="btn" type="submit" value="submit" />
         </div>
     </form>
