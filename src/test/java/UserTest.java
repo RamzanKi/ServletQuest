@@ -6,7 +6,6 @@ public class UserTest {
     @Test
     public void userTest() {
         User user = new User("myName");
-        user.addUser();
 
         assertEquals(1, user.getUsersCount());
         assertEquals("myName", user.getName());

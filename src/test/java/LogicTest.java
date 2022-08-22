@@ -30,21 +30,11 @@ public class LogicTest {
         servletContext.setAttribute("question", "2");
 
         when(request.getServletContext()).thenReturn(servletContext);
-
-
         when(request.getParameter("question")).thenReturn("2");
-
         when(request.getSession()).thenReturn(session);
-
         when(servletContext.getRequestDispatcher("/gameOver.jsp")).thenReturn(dispatcher);
-
         when(request.getRequestDispatcher("/gameOver.jsp")).thenReturn(dispatcher);
-
-
-
-
 //        request.setAttribute("question", "2");
-
 
         logic.doGet(request, response);
 
