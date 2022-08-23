@@ -39,7 +39,4 @@ public class Login extends HttpServlet {
 
         req.getServletContext().getRequestDispatcher("/game.jsp").forward(req, resp);
     }
-
-
-
 }

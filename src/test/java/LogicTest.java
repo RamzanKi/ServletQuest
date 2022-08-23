@@ -1,7 +1,6 @@
 import com.quest.Logic;
 import org.junit.jupiter.api.Test;
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -25,8 +24,6 @@ public class LogicTest {
 
         HttpSession session = mock(HttpSession.class);
 
-//        ServletConfig servletConfig = mock(ServletConfig.class);
-
         servletContext.setAttribute("question", "2");
 
         when(request.getServletContext()).thenReturn(servletContext);
@@ -34,7 +31,6 @@ public class LogicTest {
         when(request.getSession()).thenReturn(session);
         when(servletContext.getRequestDispatcher("/gameOver.jsp")).thenReturn(dispatcher);
         when(request.getRequestDispatcher("/gameOver.jsp")).thenReturn(dispatcher);
-//        request.setAttribute("question", "2");
 
         logic.doGet(request, response);
 
