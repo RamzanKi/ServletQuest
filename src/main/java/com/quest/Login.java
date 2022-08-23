@@ -20,7 +20,6 @@ public class Login extends HttpServlet {
 
         resp.setContentType("text/html");
 
-        // Post Parameters From The Request
         String param1 = req.getParameter("username");
 
         User user = new User(param1);
