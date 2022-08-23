@@ -19,14 +19,14 @@ public class Logic extends HttpServlet {
         resp.setContentType("text/html");
 
         if (req.getParameter("question").equals("1")) {
-           req.getServletContext().getRequestDispatcher("/page1.jsp").forward(req, resp);
+           req.getServletContext().getRequestDispatcher("/acceptCall.jsp").forward(req, resp);
         }
         if (req.getParameter("question").equals("2")) {
             currentSession.setAttribute("answer", GameOver.answer1);
             req.getServletContext().getRequestDispatcher("/gameOver.jsp").forward(req, resp);
         }
         if (req.getParameter("question").equals("3")) {
-            req.getServletContext().getRequestDispatcher("/page3.jsp").forward(req, resp);
+            req.getServletContext().getRequestDispatcher("/acceptInvitation.jsp").forward(req, resp);
         }
         if (req.getParameter("question").equals("4")) {
             currentSession.setAttribute("answer", GameOver.answer2);
